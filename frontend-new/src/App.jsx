@@ -1,10 +1,12 @@
 import { useState } from 'react'
-import ThemeToggle from './ThemeToggle.jsx'
+import { ThemeToggle } from './components/ui'
 import siteLogo from './assets/site-icon.svg'
-import ProxyListPage from './ProxyListPage.jsx'
-import ToolsPage from './ToolsPage.jsx'
-import AboutPage from './AboutPage.jsx'
-import ContactPage from './ContactPage.jsx'
+import { 
+  ProxyListPage, 
+  ToolsPage, 
+  AboutPage, 
+  ContactPage 
+} from './pages'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
