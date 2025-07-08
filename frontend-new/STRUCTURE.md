@@ -9,7 +9,7 @@ src/
 ├── assets/                 # Static assets (images, icons, etc.)
 ├── components/            # Reusable React components
 │   ├── ui/               # UI components (buttons, inputs, etc.)
-│   ├── layout/           # Layout components (header, footer, etc.)
+│   ├── layout/           # Layout components (HeroSection, header, footer, etc.)
 │   └── index.js          # Component exports
 ├── pages/                # Page components
 │   ├── ProxyListPage.jsx

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ThemeToggle } from './components/ui'
+import { HeroSection } from './components/layout'
 import siteLogo from './assets/site-icon.svg'
 import { 
   ProxyListPage, 
@@ -32,45 +33,7 @@ function App() {
             margin: '0 auto',
             padding: '2rem 1rem'
           }}>
-            {/* Hero Section */}
-            <section style={{
-              textAlign: 'center',
-              padding: '3rem 0'
-            }}>
-              <h2 style={{
-                fontSize: '3rem',
-                fontWeight: '700',
-                color: 'var(--foreground)',
-                marginBottom: '1rem'
-              }}>
-                Welcome to NextProbe
-              </h2>
-              <p style={{
-                fontSize: '1.25rem',
-                color: 'var(--muted-foreground)',
-                marginBottom: '2rem',
-                maxWidth: '600px',
-                margin: '0 auto 2rem auto'
-              }}>
-                High-speed proxy servers and advanced tools for secure internet browsing and data access.
-              </p>
-              <button 
-                onClick={() => navigate('proxy-list')}
-                style={{
-                  backgroundColor: 'var(--primary)',
-                  color: 'var(--primary-foreground)',
-                  padding: '0.75rem 1.5rem',
-                  border: 'none',
-                  borderRadius: 'var(--radius)',
-                  fontSize: '1rem',
-                  fontWeight: '500',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s'
-                }}
-              >
-                View Proxy List
-              </button>
-            </section>
+            <HeroSection navigate={navigate} />
 
             {/* Content Cards */}
             <section style={{

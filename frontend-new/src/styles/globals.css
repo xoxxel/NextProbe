@@ -7,6 +7,7 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
   --primary: oklch(0.623 0.214 259.815);
+  --primary-hover: oklch(0.523 0.214 259.815);
   --primary-foreground: oklch(0.97 0.014 254.604);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
@@ -15,6 +16,8 @@
   --accent: oklch(0.967 0.001 286.375);
   --accent-foreground: oklch(0.21 0.006 285.885);
   --destructive: oklch(0.577 0.245 27.325);
+  --success: oklch(11.139% 0.0379 142.511);
+  --success-foreground: oklch(0.97 0.013 142.5);
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
   --ring: oklch(0.623 0.214 259.815);
@@ -49,6 +52,8 @@
   --accent: oklch(0.274 0.006 286.033);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
+  --success: oklch(100% 0.00011 271.152);
+  --success-foreground: oklch(0.98 0.013 142.5);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.488 0.243 264.376);
@@ -121,4 +126,187 @@ body {
 
 .border {
   border: 1px solid var(--border);
+}
+
+/* Badge System Styles */
+.badge {
+  border-radius: var(--radius);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+/* Badge Variants */
+.badge-default {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+.badge-default.selected {
+  background-color: var(--success);
+  color: var(--success-foreground);
+  border: 1px solid var(--success);
+}
+
+.badge-secondary {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+.badge-secondary.selected {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  border: 1px solid var(--secondary);
+}
+
+.badge-outline {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+.badge-destructive {
+  background-color: var(--destructive);
+  color: var(--primary-foreground);
+  border: 1px solid var(--destructive);
+}
+
+.badge-success {
+  background-color: transparent;
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+.badge-warning {
+  background-color: #f59e0b;
+  color: #ffffff;
+  border: 1px solid #f59e0b;
+}
+
+/* Badge Sizes */
+.badge-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.badge-default-size {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.badge-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+/* Selectable Badge Button */
+.badge-button {
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.badge-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.badge-button:not(:disabled):hover .badge {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Badge Group */
+.badge-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.badge-group-column {
+  flex-direction: column;
+}
+
+.badge-group-wrap {
+  flex-wrap: wrap;
+}
+
+.badge-group-nowrap {
+  flex-wrap: nowrap;
+}
+
+/* Badge spacing variations */
+.badge-group-tight {
+  gap: 0.25rem;
+}
+
+.badge-group-normal {
+  gap: 0.5rem;
+}
+
+.badge-group-loose {
+  gap: 1rem;
+}
+
+/* Icon sizes within badges */
+.badge-icon-sm {
+  width: 12px;
+  height: 12px;
+}
+
+.badge-icon-default {
+  width: 14px;
+  height: 14px;
+}
+
+.badge-icon-lg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Close icon styles */
+.badge-close-icon {
+  margin-left: 0.25rem;
+  opacity: 0.7;
+}
+
+.badge-close-icon-sm {
+  width: 10px;
+  height: 10px;
+}
+
+.badge-close-icon-default {
+  width: 12px;
+  height: 12px;
+}
+
+.badge-close-icon-lg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Badge Demo Layout */
+.badge-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.badge-demo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.badge-demo-section h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
