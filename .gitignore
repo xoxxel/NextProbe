@@ -45,3 +45,10 @@ yarn-error.log*
 # Logs
 logs/
 *.log
+
+# SSH keys
+nextprobe
+nextprobe.pub
+id_*
+*.pem
+*.key
