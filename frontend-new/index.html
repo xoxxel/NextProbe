@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تست ساده React</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+      }
+      #root {
+        width: 100%;
+        min-height: 100vh;
+      }
+      .test-message {
+        background: linear-gradient(45deg, #ff0000, #00ff00);
+        color: white;
+        padding: 50px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        border: 5px solid yellow;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- تست مستقیم HTML -->
+    <div class="test-message">
+      🔥 HTML مستقیم کار می‌کند! 🔥
+    </div>
+    
+    <div id="root">
+      <!-- محتوای React اینجا بارگذاری می‌شود -->
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

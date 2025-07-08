@@ -1,0 +1,9 @@
+{
+  "log": { "level": "debug" },
+  "inbounds": [{
+    "type": "socks",
+    "listen": "127.0.0.1",
+    "listen_port": 10808
+  }],
+  "outbounds": [{ "type": "direct", "tag": "direct" }]
+}

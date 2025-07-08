@@ -1,0 +1,10 @@
+
+# run back & frontend
+cd frontend
+npm install
+# مهم: فایل index.html در root فولدر frontend لازم است
+# استفاده از vite مستقیماً به جای npm run dev
+npx vite
+
+# run sing-box
+  .\sing-box.exe run -c hand.json
